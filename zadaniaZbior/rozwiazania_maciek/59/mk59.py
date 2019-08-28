@@ -16,7 +16,7 @@ def policz_ile_dzielnikow(liczba):
     return liczba_dzielnikow
 
 
-def podpunkt_a(liczby):
+def zadanie1(liczby):
     wynik = 0
     for liczba in liczby:
         if liczba % 2 == 0:
@@ -26,17 +26,56 @@ def podpunkt_a(liczby):
             wynik += 1
     print(f"Zadanie 1:\n{wynik}")
 
-def podpunkt_b(liczby):
-    for liczba in liczby:
-        s = str(liczba)
 
-        print()
+def zadanie2(liczby):
+    wynik = 0
+    for liczba in liczby:
+        odwrocona = int(str(liczba)[::-1])
+        suma = liczba + odwrocona
+        s = str(suma)
+        if str(s) == str(s)[::-1]:
+            wynik += 1
+    print(f"Zadanie 2:\n{wynik}")
+
+
+def iloczyn_cyfr(liczba):
+    iloczyn = 1
+    s = str(liczba)
+    for c in s:
+        cyfra = int(c)
+        iloczyn *= cyfra
+    return iloczyn
+
+
+def zadanie3(liczby):
+    wyniki = [0, 0, 0, 0, 0, 0, 0, 0]
+
+    minimum = 9999999999999999
+    maximum = 0
+    for liczba in liczby:
+        i = 1
+        element = liczba
+        while iloczyn_cyfr(element) > 9:
+            element = iloczyn_cyfr(element)
+            i += 1
+        if i < 9:
+            wyniki[i - 1] += 1
+        if i == 1:
+            maximum = max(maximum, liczba)
+            minimum = min(minimum, liczba)
+
+    print("Zadanie 3:")
+    for index, wynik in enumerate(wyniki):
+        print(f"{index + 1} {wynik}")
+    print(f"Max {maximum}, min {minimum}")
+
 
 # wczytywanie danych
 liczby = []
-with open("dane/59/liczby.txt") as plik:
+with open("liczby.txt") as plik:
     for linia in plik:
         liczby.append(int(linia.strip()))
 
-podpunkt_a(liczby)
-podpunkt_b(liczby)
+zadanie1(liczby)
+zadanie2(liczby)
+zadanie3(liczby)
