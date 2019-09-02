@@ -2,7 +2,8 @@
 def policz_ile_dzielnikow(liczba):
     liczba_dzielnikow = 0
     dzielnik = 2
-    while dzielnik * dzielnik < liczba:  # jeżeli liczba n ma dzielnik różny niz jeden i n to znajduję się on w przedziale 1...pierwiastek(n)
+    while dzielnik * dzielnik < liczba:  # jeżeli liczba n ma dzielnik różny niz
+        # jeden i n to znajduję się on w przedziale 1...pierwiastek(n)
         if liczba % dzielnik == 0:
             liczba_dzielnikow += 1
         # zrobiłem tak aby while był po if'ie a nie wewnątrz, wydaję się czytelniej a nie powinno nic zmienić
@@ -27,13 +28,15 @@ def zadanie1(liczby):
     print(f"Zadanie 1:\n{wynik}")
 
 
+def odwroc(x):
+    return int(str(liczba)[::-1])
+
 def zadanie2(liczby):
     wynik = 0
     for liczba in liczby:
-        odwrocona = int(str(liczba)[::-1])
+        odwrocona = odwroc(liczba)
         suma = liczba + odwrocona
-        s = str(suma)
-        if str(s) == str(s)[::-1]:
+        if s == odwroc(c):
             wynik += 1
     print(f"Zadanie 2:\n{wynik}")
 
@@ -70,12 +73,16 @@ def zadanie3(liczby):
     print(f"Max {maximum}, min {minimum}")
 
 
-# wczytywanie danych
-liczby = []
-with open("liczby.txt") as plik:
-    for linia in plik:
-        liczby.append(int(linia.strip()))
+def main():
+    # wczytywanie danych
+    liczby = []
+    with open("liczby.txt") as plik:
+        for linia in plik:
+            liczby.append(int(linia.strip()))
+    zadanie1(liczby)
+    zadanie2(liczby)
+    zadanie3(liczby)
 
-zadanie1(liczby)
-zadanie2(liczby)
-zadanie3(liczby)
+
+if __name__ == '__main__':
+    main()
