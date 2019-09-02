@@ -1,0 +1,19 @@
+Co umożliwia pętla?	Pętla umożliwia wielokrotne wykonanie bloku instrukcji.
+Co umożliwia instrukcja warunkowa?	Pozwala na wykonanie bądź pominięcie bloku instrukcji. Co się stanie zależy od tego czy zdefiniowany przez nas warunek jest prawdziwy.
+Jakie są 4 atrybuty zmiennej?	1. Nazwa zmiennej 2. Miejsce w pamięci komputera 3. Wartość 4. Typ
+Jaka napisać pętlę for, która wykona się 5 razy?	for i in range(5): instrukcje_do_wykonania
+Jaka jest składania instrukcji warunkowej?	if warunek: insturkcje_ktore_sie_wykonaja_jezeli_warunek_prawdziwy else: instrukcje_jezeli_nieprawdziwy
+Jaka jest składnia pętli while?	while warunek: instrukcje_do_wykonania
+Jak pobrać od użytkownika jakieś słowo i zapisać je w zmiennej?	"slowo = input(""Podaj slowo:\n"")"
+Jak pobrać od użytkownika jakąś liczbę i zapisać ją w zmiennej?	"liczba = int(input(""Podaj liczbę:\n""))"
+Co to jest interpreter języka Python?	To program komputerowy, który analizuje kod źródłowy programu oraz pokolei wykonuje zapisane w nim instrukcje.
+Co to jest kod źródłowy?	Tekst, który składa się z instrukcji danego języka programowania. Kiedy programujemy piszemy kod źródłowy.
+Co to jest tablica ASCII?	System kodowania znaków. Przyporządkowuje liczbom z zakresu 0−127: litery alfabetu angielskiego, cyfry, znaki przestankowe i inne symbole oraz polecenia sterujące.
+Co to jest dzielenie całkowite?	Jest to dzielenie polegające na odrzuceniu części ułamkowej wyniku.
+Jaki jest operator dzielenia całkowitego w Pythonie?	// np. iloraz = 5//3
+Jaki jest operator reszty z dzielenia w Pythonie?	% np. reszta = 5%3
+Jaka jest składnia deklaracji funkcji?	def nazwa_funkcji (argumenty): instrukcje return zwracana_wartosc
+Co to jest sytem pozycyjny?	Metoda zapisywania liczb w taki sposób, że w zależności od pozycji danej cyfry, oznacza ona wielokrotność potęgi pewnej liczby uznawanej za bazę danego systemu.
+Co to jest system dwójkowy/binarny?	System pozycyjny, którego bazą jest liczba dwa.
+"Jak wypisać na ekran tekst ""Wartość zmiennej n wynosi <tutaj ma się podstawić wartość zmiennej n>"""	"print(f""Wartość zmiennej n wynosi {n}"") f jak format, co oznacza: zformatuj stringa podstawiając wartości zmiennych zamiast nawiasów klamrowych"
+Podstawowe typy danych	1. int - (integer) liczba całkowita 2. str - (string) łańcuch znaków 3. float - liczba zmiennoprzecinkowa
