@@ -28,7 +28,7 @@ def zadanie1(liczby):
     print(f"Zadanie 1:\n{wynik}")
 
 
-def odwroc(x):
+def odwroc(liczba):
     return int(str(liczba)[::-1])
 
 def zadanie2(liczby):
