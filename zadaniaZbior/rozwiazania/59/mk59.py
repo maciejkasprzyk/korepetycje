@@ -71,21 +71,17 @@ def zadanie3(liczby):
         print(f"{index + 1} {wynik}")
     print(f"Max {maximum}, min {minimum}")
 
-def main():
-    # wczytywanie danych
-    liczby = []
 
-    with open("liczby.txt") as plik:
-        for linia in plik:
-            linia_bez_n = linia.strip() # "123312" -> 123312
-            x = int(linia_bez_n)
-            liczby.append(x)
+# wczytywanie danych
+liczby = []
 
-    zadanie1(liczby)
-    zadanie2(liczby)
-    zadanie3(liczby)
+with open("liczby.txt") as plik:
+    for linia in plik:
+        linia_bez_n = linia.strip() # "123312" -> 123312
+        x = int(linia_bez_n)
+        liczby.append(x)
 
+zadanie1(liczby)
+zadanie2(liczby)
+zadanie3(liczby)
 
-
-if __name__ == '__main__':
-    main()
