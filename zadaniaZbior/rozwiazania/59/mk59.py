@@ -1,7 +1,7 @@
 # funkcja obliczająca ile jest dzielników pierwszych
 def policz_ile_dzielnikow(liczba):
     liczba_dzielnikow = 0
-    dzielnik = 2
+    dzielnik = 3
     while dzielnik * dzielnik < liczba:  # jeżeli liczba n ma dzielnik różny niz
         # jeden i n to znajduję się on w przedziale 1...pierwiastek(n)
         if liczba % dzielnik == 0:
@@ -34,9 +34,8 @@ def odwroc(liczba):
 def zadanie2(liczby):
     wynik = 0
     for liczba in liczby:
-        odwrocona = odwroc(liczba)
-        suma = liczba + odwrocona
-        if s == odwroc(c):
+        suma = liczba + odwroc(liczba)
+        if suma == odwroc(suma):
             wynik += 1
     print(f"Zadanie 2:\n{wynik}")
 
@@ -72,16 +71,20 @@ def zadanie3(liczby):
         print(f"{index + 1} {wynik}")
     print(f"Max {maximum}, min {minimum}")
 
-
 def main():
     # wczytywanie danych
     liczby = []
+
     with open("liczby.txt") as plik:
         for linia in plik:
-            liczby.append(int(linia.strip()))
+            linia_bez_n = linia.strip() # "123312" -> 123312
+            x = int(linia_bez_n)
+            liczby.append(x)
+
     zadanie1(liczby)
     zadanie2(liczby)
     zadanie3(liczby)
+
 
 
 if __name__ == '__main__':
