@@ -40,14 +40,29 @@ def zadanie2(liczby):
     print(f"Zadanie 2:\n{wynik}")
 
 
-def iloczyn_cyfr(liczba):
+def iloczyn_cyfr(x):
     iloczyn = 1
-    s = str(liczba)
+    s = str(x)
     for c in s:
         cyfra = int(c)
         iloczyn *= cyfra
     return iloczyn
 
+def iloczyn_cyfr2(x):
+    iloczyn= 1
+    while x > 0:
+        iloczyn *= x % 10
+        x //= 10
+
+    return iloczyn
+
+def licz_moc(x):
+    moc = 1
+    x = iloczyn_cyfr2(x)
+    while x > 9:
+        x = iloczyn_cyfr2(x)
+        moc += 1
+    return moc
 
 def zadanie3(liczby):
     wyniki = [0, 0, 0, 0, 0, 0, 0, 0]
@@ -55,14 +70,10 @@ def zadanie3(liczby):
     minimum = 9999999999999999
     maximum = 0
     for liczba in liczby:
-        i = 1
-        element = liczba
-        while iloczyn_cyfr(element) > 9:
-            element = iloczyn_cyfr(element)
-            i += 1
-        if i < 9:
-            wyniki[i - 1] += 1
-        if i == 1:
+        moc = licz_moc(liczba)
+        if moc < 9:
+            wyniki[moc - 1] += 1
+        if moc == 1:
             maximum = max(maximum, liczba)
             minimum = min(minimum, liczba)
 

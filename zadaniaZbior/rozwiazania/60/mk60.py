@@ -1,5 +1,6 @@
 
 def nwd(a, b):
+    # a jest wieksze, jezelie nie to w pierwszy obrocie sie zamienia
     while b:
         a, b = b, a%b
     return a
@@ -27,13 +28,12 @@ out.write(f"Jest {licznik} liczb < 1000. Dwie ostatnie to {lastButOne}, {last}.\
 
 # zadanie 2
 out.write("Zadanie 2\n")
-for number in numbers:
-    # print(number)
+for number in numbers: # ta petla wykonuje sie kilka sekund, w c++ analogiczna petla w ulamek sekundy :/
     dividers = []
+    print(number)
     for divider in range(1,number+1):
         if number % divider == 0:
             dividers.append(divider)
-
     if len(dividers) == 18:
         out.write(f"{number}: {dividers}\n")
 
@@ -48,5 +48,7 @@ for a in numbers:
     if maxNwd == 1:
         maximum = max(maximum, a)
 out.write(f"{maximum}\n")
+
+
 out.close()
 
