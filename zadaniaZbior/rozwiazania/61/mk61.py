@@ -35,7 +35,6 @@ with open("ciagi.txt") as file:
         ciag = [int(x) for x in line.split()]
         ciagi.append(ciag)
 
-
 print("zadanie 1")
 maxiumum = 0
 licznik = 0
@@ -71,6 +70,8 @@ with open("bledne.txt") as file:
         ciag = [int(x) for x in line.split()]
         bledne.append(ciag)
 
+# 5 4 5 6 7 8
+
 for ciag in bledne:
     r = []
     i = 0
@@ -81,13 +82,13 @@ for ciag in bledne:
     if r[0] != r[1] and r[1] == r[2]:
         print(ciag[0])
         continue
-    if r[0]!=r[2] and r[1]!=r[2] and r[3]==r[2]:
+    if r[0] != r[2] and r[1] != r[2] and r[3] == r[2]:
         print(ciag[1])
         continue
 
     i = 0
     while i < len(r):
         if r[i] != r[0]:
-            print(ciag[i+1])
+            print(ciag[i + 1])
             break
         i += 1
