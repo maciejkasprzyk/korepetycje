@@ -11,7 +11,7 @@ def quick_sort(lista, lewy, prawy):
         # wprowadzamy zmienne pomocnicze
         l, p = lewy, prawy - 1
 
-        while l <= p:
+        while True:
             # idz l dopki jest mniejszy niz pivot
             while lista[l] < lista[pi]:
                 l += 1
@@ -24,6 +24,7 @@ def quick_sort(lista, lewy, prawy):
             else: # minely sie
                 lista[l],lista[pi] = lista[pi], lista[l]
                 pi = l
+                break
 
         quick_sort(lista, lewy, pi - 1)
         quick_sort(lista, pi + 1 , prawy)

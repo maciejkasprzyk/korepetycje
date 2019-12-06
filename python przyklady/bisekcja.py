@@ -24,7 +24,7 @@ def bisekcja(f, a, b, epsilon):
 
 
 def funkcja(x):
-    return (x - 1) * (x - 4)
+    return (x-3)*(x-4)
 
 
 x = [i * 0.05 for i in range(100)]
@@ -33,5 +33,5 @@ y = [funkcja(i) for i in x]
 plt.plot(x, y)
 plt.show()
 
-a, b = bisekcja(funkcja, 2, 100, 0.000001)
+a, b = bisekcja(funkcja, -20, 100, 0.00001)
 print(a,b)

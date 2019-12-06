@@ -35,3 +35,4 @@ def merge_sort(list):
     return polacz(merge_sort(lewa), merge_sort(prawa))
 
 print(merge_sort([3,5,7,2,1]))
+
