@@ -70,7 +70,7 @@ with open("bledne.txt") as file:
         ciag = [int(x) for x in line.split()]
         bledne.append(ciag)
 
-# 5 4 5 6 7 8
+# 4 4 4 6 7 8
 
 for ciag in bledne:
     r = []

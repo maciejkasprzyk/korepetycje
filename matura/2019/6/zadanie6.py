@@ -78,4 +78,4 @@ wynik = sorted(wynik)
 for cena , nazwa in wynik:
     print(nazwa,cena)
 
-print("zad 6.5")
+print("zad 6.4")
